@@ -96,7 +96,7 @@ function Header() {
                 type="button"
                 className="px-6 py-2 mr-5 border-transparent rounded-lg shadow-sm text-orange font-medium bg-white1 hover:bg-primary/80 hover:text-white md:inline-flex"
               >
-                Sign Up
+                Sign Up!
               </button>
               <button
                 type="button"
