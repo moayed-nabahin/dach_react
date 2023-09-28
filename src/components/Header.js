@@ -18,7 +18,7 @@ function Header() {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="min-h-screen">
+    <header className="">
       <div className="relative overflow-hidden bg-cover bg-no-repeat bg-center h-64 sm:bg-cover sm:bg-center sm:h-32 md:h-48 lg:h-64 xl:h-80 text-center background-image">
         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
           <div className="hidden grid-cols-2 mt-2 sm-h sm:grid">
@@ -106,78 +106,85 @@ function Header() {
               </button>
             </div>
           </div>
-          {/* <div className="flex h-full items-center justify-center"> */}
-          <div className="flex flex-col items-center justify-center h-screen">
-            <h4 className=" place-items-end text-base tracking-widest font-medium text-white1">
-              Your style booking specialist
-            </h4>
-            <h2 className=" text-5xl text-white1 font-semibold">
-              Clothes mean nothing until <br /> someone lives in them.
-            </h2>
-            {/* new section */}
-            <div className="flex justify-center flex-col xl:flex-row mt-7 h-16 gap-5">
-              <div className="flex p-2 mt-32 xl:mt-0 bg-white1 rounded-lg">
-                <form
-                  action=""
-                  className="grid grid-cols-1 w-32 border-r border-b3"
+          <div className="flex h-full items-center justify-center">
+            <div className="absolute flex justify-center flex-col top-60 w-fit ">
+              <h4 className="text-base font-medium text-white1">
+                Your style booking specialist
+              </h4>
+              <h2 className="text-3xl sm:text-5xl text-white1 font-semibold lg:mb-3">
+                Clothes mean nothing until <br /> someone lives in them.
+              </h2>
+              {/* new section */}
+              <div className="w-fit sm:w-full mt-3 flex justify-center flex-col xl:flex-row h-auto gap-3">
+                <div className="flex flex-col justify-center">
+                  <div className="w-10/12 sm:w-full lg:h-20 mx-auto flex rounded-lg justify-between bg-white1 flex-row">
+                    <form
+                      action=""
+                      className="grid grid-cols-1 px-10 sm:px-28 lg:px-28  py-1  border-r border-b3"
+                    >
+                      <label>
+                        <input
+                          className="mr-2 "
+                          type="checkbox"
+                          defaultChecked={checked}
+                          onChange={() => setChecked(!checked)}
+                        />
+                        At home
+                      </label>
+                      <label>
+                        <input
+                          className="mr-2"
+                          type="checkbox"
+                          defaultChecked={checked}
+                          onChange={() => setChecked(!checked)}
+                        />
+                        Business
+                      </label>
+                    </form>
+                    <div className="flex justify-center px-10 sm:px-28 lg:px-20 py-1 items-center ">
+                      <CgCalendarDates size="1.5rem" className="mr-2" />
+                      Today
+                    </div>
+                  </div>
+                  <div className="w-10/12 sm:w-full lg:h-20 mx-auto mt-4 flex rounded-lg justify-between bg-white1 flex-row">
+                    <div className="flex justify-between pt-3 lg:pt-7 py-1 lg:px-28 sm:py-3 px-12 sm:px-28 border-r border-b3	">
+                      <AiOutlineClockCircle size="1.5rem" className="mr-2" />
+                      Now
+                    </div>
+                    <div className="flex justify-center py-1 sm:py-3  px-10 lg:px-28 sm:px-28">
+                      <CiLocationOn size="1.5rem" className="mr-2 mt-3 sm:mt-0" />
+                      Los angeles
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="relative w-10/12 h-16 sm:w-full mx-auto mt-2 flex lg:self-center
+                rounded-lg bg-white1"
                 >
-                  <label>
-                    <input
-                      className="mr-2 "
-                      type="checkbox"
-                      defaultChecked={checked}
-                      onChange={() => setChecked(!checked)}
-                    />
-                    At home
-                  </label>
-                  <label>
-                    <input
-                      className="mr-2"
-                      type="checkbox"
-                      defaultChecked={checked}
-                      onChange={() => setChecked(!checked)}
-                    />
-                    Business
-                  </label>
-                </form>
-                <div className="flex justify-center pt-3 w-32 border-r border-b3	">
-                  <CgCalendarDates size="1.5rem" className="mr-2" />
-                  Today
+                  <input
+                    type="text"
+                    className="w-96  pl-16 text-lg p-4 bg-white1 rounded-lg"
+                    placeholder="Hair Salon"
+                  />
+                  <BsSearch
+                    size="2rem"
+                    className="absolute text-b3 top-4 left-4  xl:top-4 xl:left-4"
+                  />
                 </div>
-                <div className="flex justify-center pt-3 w-32 border-r border-b3	">
-                  <AiOutlineClockCircle size="1.5rem" className="mr-2" />
-                  Now
-                </div>
-                <div className="flex justify-center pt-3 mr-10 w-32">
-                  <CiLocationOn size="1.5rem" className="mr-2" />
-                  Los angeles
+                <div className="flex justify-center lg:self-center">
+                  <button
+                    type="button"
+                    className=" p-4 pr-12 lg:mt-2 text-xl pl-12 rounded-lg shadow-sm text-white1 font-medium bg-orange hover:bg-white1 hover:text-orange md:inline-flex"
+                  >
+                    Search
+                  </button>
                 </div>
               </div>
-              <div className="relative">
-                <input
-                  type="text"
-                  className=" w-96 pl-16 text-lg p-4 bg-white1 rounded-lg"
-                  placeholder="Hair Salon"
-                />
-                <BsSearch
-                  size="2rem"
-                  className="absolute text-b3 top-4 left-28  xl:top-4 xl:left-4"
-                />
-              </div>
-              <div>
-                <button
-                  type="button"
-                  className=" p-4 pr-12 text-xl  pl-12   rounded-lg shadow-sm text-white1 font-medium bg-orange hover:bg-white1 hover:text-orange md:inline-flex"
-                >
-                  Search
-                </button>
-              </div>
+              {/* end section */}
             </div>
-            {/* end section */}
           </div>
         </div>
       </div>
-      {/* </div> */}
     </header>
   );
 }

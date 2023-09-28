@@ -1,5 +1,66 @@
 .background-image {
   background-image: url("./assets//heroSection.png");
-   height: 100vh;
+  height: 85vh;
   /* margin-top: -70px; */
+}
+
+/* CustomArrow.css */
+.custom-next-arrow,
+.custom-prev-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: xx-large;
+  font-weight: bolder;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: black;
+}
+
+.mmmm {
+  margin: 0 !important;
+}
+.swiper-pagination {
+  position: absolute !important;
+  left: 2px !important;
+  bottom: 5px !important;
+}
+.swiper {
+  border-radius: 10px !important;
+}
+.swiper-wrapper1 {
+  height: 43px !important;
+  margin-top: 5px !important;
+}
+.custom-next-arrow {
+  right: -30px;
+}
+
+.custom-prev-arrow {
+  padding-right: 10px;
+  left: -40px;
+}
+@media (max-width: 1024px) {
+  .custom-next-arrow,
+  .custom-prev-arrow {
+    display: none;
+  }
+}
+.slider-container {
+  width: 80%;
+  height: 175px;
+}
+/* .swiper-button-prev {
+  left: 30px !important;
+}
+
+.swiper-button-next {
+  right: -10px !important;
+} */
+@media (max-width: 640px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
